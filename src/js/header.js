@@ -15,20 +15,48 @@ export const header = {
 		}
 	},
 	mobile: function () {
-		$(".header-hambuger").on("click", function () {
+		$(".header-hamburger").on("click", function () {
 			$(this).toggleClass("active");
 			$("body").toggleClass("isOpenMenu");
 		});
 	},
+	accordionMenu: function () {
+		$('.navbar-mobile .menu-list .has-children > a').on('click', function (e) {
+			e.preventDefault();
+			$(this).parent().toggleClass('active');
+			$(this).next('ul').slideToggle();
+		});
+	},
+	scrollUp: function () {
+		const $btn = $(".scroll-up");
+
+		$(window).on("scroll", function () {
+			if ($(this).scrollTop() > 200) {
+				$btn.addClass("active");
+			} else {
+				$btn.removeClass("active");
+			}
+		});
+
+		$btn.on("click", function (e) {
+			e.preventDefault();
+			$("html, body").animate({ scrollTop: 0 }, 600);
+		});
+	},
 	initVariable: function () {
 		const height = $("header").height();
-		document.documentElement.style.setProperty("--header-height", `${height}px`);
+		document.documentElement.style.setProperty(
+			"--header-height",
+			`${height}px`
+		);
 	},
 	init: function () {
 		headerSearch();
 		header.scrollActive();
 		header.mobile();
 		header.initVariable();
+		header.accordionMenu();
+		header.scrollUp();
 	},
 };
 document.addEventListener(

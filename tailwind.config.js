@@ -1,11 +1,11 @@
 const plugin = require("tailwindcss/plugin");
-function setClamp (min, max = min) {
+function setClamp(min, max = min) {
 	const minPx = parseFloat(min);
 	const maxPx = parseFloat(max);
 	const maxValue = (maxPx / 1920) * 100 + "rem";
 	return `clamp(${minPx}px, ${maxValue}, ${maxValue})`;
 }
-function r (value) {
+function r(value) {
 	return (value / 1920) * 100 + "rem";
 }
 module.exports = {
@@ -286,6 +286,42 @@ module.exports = {
 				"fade-in": "fadeIn 2s linear infinite",
 				spin: "spin 2s linear infinite",
 			},
+			inset: {
+				'1/2': '50%',
+				'1/3': '33.333333%',
+				'2/3': '66.666667%',
+				'1/4': '25%',
+				'2/4': '50%',
+				'3/4': '75%',
+				'full': '100%',
+				'-1/2': '-50%',
+				'-1/3': '-33.333333%',
+				'-2/3': '-66.666667%',
+				'-1/4': '-25%',
+				'-2/4': '-50%',
+				'-3/4': '-75%',
+				'-full': '-100%',
+				'10%': '10%',
+				'20%': '20%',
+				'30%': '30%',
+				'40%': '40%',
+				'50%': '50%',
+				'60%': '60%',
+				'70%': '70%',
+				'80%': '80%',
+				'90%': '90%',
+				'100%': '100%',
+				'-10%': '-10%',
+				'-20%': '-20%',
+				'-30%': '-30%',
+				'-40%': '-40%',
+				'-50%': '-50%',
+				'-60%': '-60%',
+				'-70%': '-70%',
+				'-80%': '-80%',
+				'-90%': '-90%',
+				'-100%': '-100%',
+			},
 			backgroundImage: ({ theme }) => ({
 				"linear-1": `linear-gradient(90deg, #181830 -0.01%, #1D1D38 19.26%, #141228 40.12%, #2C223A 75.47%, #231B33 99.98%)`,
 			}),
@@ -301,6 +337,7 @@ module.exports = {
 				DEFAULT: "12.5px",
 			},
 			borderRadius: {
+				0: "0px",
 				1: "calc(4/1920*100rem) /* 4px */",
 				2: "calc(8/1920*100rem) /* 8px */",
 				3: "calc(12/1920*100rem) /* 12px */",
@@ -481,7 +518,10 @@ module.exports = {
 				999: "999",
 				1000: "1000",
 			},
+
 		},
+
+
 	},
 	corePlugins: {
 		aspectRatio: true,

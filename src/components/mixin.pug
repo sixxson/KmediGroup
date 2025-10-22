@@ -56,3 +56,20 @@ mixin HeaderLanguage()
 					li 
 						a(href="") 
 							span EN
+mixin dropdownContent(title)
+		a(href="#")= title
+		ul
+			li
+				a(href="") Lorem ipsum dolor sit amet.
+			li
+				a(href="") Lorem ipsum dolor sit amet.
+			li
+				a(href="") Lorem ipsum dolor sit amet.
+			li
+				a(href="") Lorem ipsum dolor sit amet.
+mixin btn-next()
+	.btn.btn-next(class="w-12 h-12 border border-none bg-white  flex justify-center items-center rounded-2 ")
+		<i class="fa-light fa-angle-left text-gray-500 "></i>
+mixin btn-prev()
+	.btn.btn-prev(class="w-12 h-12 border border-none bg-white  flex justify-center items-center rounded-2")
+		<i class="fa-light fa-angle-right text-gray-500 "></i>
