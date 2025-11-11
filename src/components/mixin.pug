@@ -1,14 +1,14 @@
 mixin subscribeForm()
 	.subscribe
 		.subscribefrm
-			input.subscribeemail(type="text", placeholder="Nhập email của bạn...")
+			input.subscribeemail(type="text" placeholder="Nhập email của bạn...")
 			button.subscribebutton Gửi
 mixin PugImg(url="./img/1.jpg")
-	img(data-src=url, alt="", class="lozad " + attributes.class)
+	img(data-src=url, alt="" class="lozad " + attributes.class)
 mixin btnViewAll(text="Xem thêm")
 	a(href="" x-link class='btn-primary-2 btn ' + attributes.class)
 		span=text
-		img(src=imgButton, alt="", class="w-5 h-5 svg")
+		img(src=imgButton, alt="" class="w-5 h-5 svg")
 mixin HeaderLanguageVertical()
 	ul 
 		li.wpml-ls-item
@@ -27,7 +27,7 @@ mixin HeaderLanguageHorizontal()
 			a(href="") 
 				span.wpml-ls-native VN
 mixin BtnPrimary(text="")
-	a(href="", class='btn-primary btn ' + attributes.class)
+	a(href="" class='btn-primary btn ' + attributes.class)
 		span=text
 mixin HeaderMenu()
 	.header-menu 
@@ -57,19 +57,33 @@ mixin HeaderLanguage()
 						a(href="") 
 							span EN
 mixin dropdownContent(title)
-		a(href="#")= title
-		ul
-			li
-				a(href="") Lorem ipsum dolor sit amet.
-			li
-				a(href="") Lorem ipsum dolor sit amet.
-			li
-				a(href="") Lorem ipsum dolor sit amet.
-			li
-				a(href="") Lorem ipsum dolor sit amet.
+	a(href="#")= title
+	ul
+		li
+			a(href="") Lorem ipsum dolor sit amet.
+		li
+			a(href="") Lorem ipsum dolor sit amet.
+		li
+			a(href="") Lorem ipsum dolor sit amet.
+		li
+			a(href="") Lorem ipsum dolor sit amet.
 mixin btn-next()
 	.btn.btn-next(class="w-12 h-12 border border-none bg-white  flex justify-center items-center rounded-2 ")
 		<i class="fa-light fa-angle-left text-gray-500 "></i>
 mixin btn-prev()
 	.btn.btn-prev(class="w-12 h-12 border border-none bg-white  flex justify-center items-center rounded-2")
 		<i class="fa-light fa-angle-right text-gray-500 "></i>
+mixin Breadcrumb-custom(items)
+	.flex.items-center
+		each item, i in items
+			- const isLast = i === items.length - 1
+			p(
+				class=[
+					'px-2 py-0', 
+					'body-18',
+					isLast ? 'font-bold text-primary-1' : 'font-normal text-gray-700'
+				]
+			)= item
+			if !isLast
+				//- thanh ngăn cách ngắn giữa các phần tử
+				span(class="inline-block w-[1px] h-[13px] bg-gray-400 rounded mx-1")

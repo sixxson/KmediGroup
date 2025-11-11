@@ -86,7 +86,7 @@ module.exports = {
 			},
 		},
 		fontFamily: {
-			primary: ["IBM Plex Sans", "sans-serif"],
+			primary: ["Source Sans Pro", "sans-serif"],
 			goldman: ["Goldman", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 			awesomeSharp: ['"Font Awesome 6 Sharp"'],
@@ -114,6 +114,14 @@ module.exports = {
 			40: ["calc(40/1920*100rem)"],
 			42: ["calc(42/1920*100rem)"],
 			64: ["calc(64/1920*100rem)"],
+		},
+		lineHeight: {
+			"line-h-h1": "1.25",
+			"line-h-h2": "1.35",
+			"line-h-h3": "1.3",
+			"line-h-h4": "1.4",
+
+
 		},
 		spacing: {
 			0: "0px",
@@ -234,8 +242,9 @@ module.exports = {
 			colors: {
 				transparent: "transparent",
 				"primary": {
-					"1": "#fbd844",
-					"2": "#ef212d",
+					"1": "#217277",
+					"2": "#e3fbf4",
+					"Secondary": "#217277",
 				},
 				"neutral": {
 					"50": "#f6f6f6",
@@ -324,6 +333,8 @@ module.exports = {
 			},
 			backgroundImage: ({ theme }) => ({
 				"linear-1": `linear-gradient(90deg, #181830 -0.01%, #1D1D38 19.26%, #141228 40.12%, #2C223A 75.47%, #231B33 99.98%)`,
+				"bg-liner-header": ` linear-gradient(90deg, #217277 0%, rgba(33, 114, 119, 0.00) 54.06%)`,
+				"bg-linner-home": `linear-gradient(180deg, #E3FBF4 0%, #F3FFFB 48.58%)`,
 			}),
 			backgroundPosition: {
 				"pos-100-0": "100% 0%",

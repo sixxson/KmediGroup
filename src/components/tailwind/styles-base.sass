@@ -40,22 +40,24 @@
 		&>div
 			@apply absolute top-0 left-0 w-full h-full transition-all duration-300
 	body
-		@apply text-[#333333] text-base font-primary
+		@apply text-gray-900 text-base font-primary
 	.row
 		@apply flex flex-wrap -mx-[7.5px] xl:-mx-5 gap-y-5
 	.col
 		@apply px-[7.5px] xl:px-5 w-full
 	h1
-		@apply text-3xl font-bold
+		@apply text-6xl font-bold leading-line-h-h1
 
 	h2
-		@apply text-2xl font-bold
+		@apply text-2xl font-bold leading-line-h-h2
 
 	h3
-		@apply text-xl font-bold
+		@apply text-4xl font-bold leading-line-h-h3
 
 	h4
-		@apply text-lg font-bold
+		@apply text-lg font-bold leading-line-h-h4
+	h5
+		@apply text-xl font-bold leading-line-h-h4
 
 	img
 		@apply inline max-w-none
@@ -67,6 +69,16 @@
 		@apply empty:hidden
 	input
 		@apply outline-offset-0 shadow-none ring-0 #{!important}
+	.body-1
+		@apply title-20 leading-line-h-h4 font-normal
+	.body-2
+		@apply body-18 leading-line-h-h4 font-normal
+	.body-3
+		@apply body-16 leading-line-h-h4 font-normal
+	.body-4
+		@apply text-sm font-normal leading-line-h-h4
+	.body-5
+		@apply text-xs font-normal leading-line-h-h4
 	.section
 		@apply py-12.5 lg:py-20
 	.section-40
