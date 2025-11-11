@@ -1,27 +1,7 @@
-h1 Global Healthcare
-include ./HeaderHambuger.pug
-.navbar-mobile(class="lg:hidden")
-	.header-search-form-mobile
-		input(type="text" placeholder="Search" class="focus:outline-primary-1/20")
-		button
-	.header-user-mobile 
-		ul
-			li.regster
-				a(href="") Đăng ký
-			li
-				a(href="") Đăng nhập
-	.menu-list
-		ul
-			li.has-children
-				+dropdownContent("Danh mục 1")
-			li.has-children
-				+dropdownContent("Danh mục 2")
-			li.has-children
-				+dropdownContent("Danh mục 3")
-			li.has-children
-				+dropdownContent("Danh mục 4")
-			li
-				a(href="#") Nạp tiền
-			li
-				a(href="#") Tải lên
-
+header 
+	.bg-header
+		.bg-header-l
+			.logo
+				.img-ratio(class="ratio:pt-[78_267]")
+					+PugImg("./img/logo.svg")
+		.bg-header-r

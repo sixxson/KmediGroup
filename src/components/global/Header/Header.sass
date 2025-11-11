@@ -1,60 +1,15 @@
-.navbar-mobile
-    @screen -xl
-        @apply left-0 w-full z-50 
-        @apply fixed top-[calc(var(--header-height)_+_0px)] px-4 py-5
-        @apply shadow-md bg-white
-        @apply h-[calc(100dvh-(var(--header-height)))]
-        @apply border-t border-t-primary-1/20 flex flex-col
-        @apply invisible -translate-x-full
-        transition: transform .3s ease-in-out
-.header-search-form-mobile
-    @apply flex items-center relative
-    input
-        @apply rem:h-[50px]
-        @apply flex-1 border border-primary-1/20 px-5 border-r-0
-        @apply text-black text-lg font-medium rounded-none
-    button
-        @apply rem:h-[50px] rem:w-[50px] flex-center bg-primary-1 text-white
-        &::before
-            content: '\f002'
-            @apply font-awesome font-light text-2xl
-.header-user-mobile
-    @apply xl:block
-    ul
-        @apply flex
-        li
-            @apply border-b-primary-1/20
-            @apply flex-1 border first:border-r-0
-            &.login
-                a
-                    @apply bg-primary-1 text-white
-            a
-                @apply w-full flex-center rem:h-[48px] font-semibold text-lg
-.menu-list
-    @apply mt-4 flex-1 overflow-y-auto
-    & > ul
-        @apply flex flex-col
-        & > li
-            @apply border-b border-gray-200
-            & > a
-                @apply block py-4 text-lg font-medium text-gray-800
-            &.has-children
-                & > a
-                    @apply relative
-                    &::after
-                        content: '\f078'
-                        font-family: 'Font Awesome 6 Pro'
-                        font-weight: 300
-                        @apply absolute right-2 top-1/2 -translate-y-1/2
-                        transition: transform .3s
-            &.has-children.active
-                & > a
-                    &::after
-                        transform: translateY(-50%) rotate(180deg)
-            ul
-                @apply hidden pl-4
-                a
-                    @apply text-base py-3 block
-body.isOpenMenu .navbar-mobile
-    @screen -xl
-        @apply visible translate-x-0
+@import 'HeaderHambuger'
+.bg-header
+	@apply w-full rem:h-[120px] flex
+	.bg-header-l
+		@apply bg-primary-1 w-[calc(500/1920*100%)] h-full relative
+		&::before
+			content: ""
+			@apply absolute top-0 left-0 w-full bg-white h-full rounded-br-[60px]
+		.logo
+			@apply rem:w-[267px] rem:h-[120px]
+	.bg-header-r
+		@apply bg-white w-[calc(1420/1920*100%)] h-full relative
+		&::before
+			content: ""
+			@apply absolute top-0 left-0 w-full bg-primary-1 h-full rounded-tl-[52px]
