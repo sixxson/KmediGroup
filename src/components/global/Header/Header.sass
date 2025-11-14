@@ -1,15 +1,90 @@
 @import 'HeaderHambuger'
+header
+	@apply sticky
 .bg-header
-	@apply w-full rem:h-[120px] flex
+	@apply w-full h-full flex
 	.bg-header-l
-		@apply bg-primary-1 w-[calc(500/1920*100%)] h-full relative
+		@apply bg-primary-1 w-[calc(534/1920*100%)] h-full relative flex justify-end items-center border-transparent
 		&::before
 			content: ""
-			@apply absolute top-0 left-0 w-full bg-white h-full rounded-br-[60px]
-		.logo
-			@apply rem:w-[267px] rem:h-[120px]
+			@apply absolute top-0 left-0 w-full bg-white h-full rem:rounded-br-[60px] border-transparent
 	.bg-header-r
-		@apply bg-white w-[calc(1420/1920*100%)] h-full relative
+		@apply bg-white w-[calc(1386/1920*100%)] h-full relative flex
 		&::before
 			content: ""
-			@apply absolute top-0 left-0 w-full bg-primary-1 h-full rounded-tl-[52px]
+			@apply absolute top-0 left-0 w-full bg-primary-1 h-full rem:rounded-tl-[52px]
+.header-main
+	@apply flex justify-between py-3 items-center
+	.logo-header
+		@apply xl:rem:w-[267px] py-2 ml-4 sm:rem:w-[10%] w-[15%]
+	.menu-header
+		@apply flex flex-col z-1 gap-2
+		.menu-top
+			@apply -lg:hidden
+			&>ul
+				@apply flex justify-end  body-3 text-white items-center font-bold gap-1
+				&>li
+					@apply px-6 py-3 border-r
+					&:last-child
+						@apply font-light border-0 flex justify-end items-center gap-1 pr-1
+						&>a
+							&::after
+								content: "\f107"
+								@apply text-white font-awesome body-4 pl-1 font-light
+					&:nth-child(3)
+						@apply py-0
+			.language-dropdown
+				@apply relative inline-block
+				.language-trigger
+					@apply cursor-pointer text-primary-1 font-medium flex items-center gap-2
+				.language-menu
+					@apply absolute left-0 top-full bg-white shadow-md rounded-md  min-w-[120px] overflow-hidden
+					@apply transition-all duration-300 opacity-0 invisible translate-y-2
+					li
+						a
+							@apply block px-4 py-2 hover:bg-primary-1 hover:text-white text-gray-700
+				&:hover
+					.language-menu
+						@apply opacity-100 visible translate-y-0
+			.language-menu
+				@apply absolute bg-white shadow-md rounded-md mt-2 invisible opacity-0 transition-all duration-300
+			span
+				@apply uppercase px-2
+			.fa-phone-plus
+				@apply title-24 p-2
+		.menu-bottom
+			@apply flex gap-12 -xl:justify-between -xl:items-center
+			&>ul
+				@apply flex body-2 gap-11 text-white  items-center uppercase font-semibold -xl:hidden
+				&>li
+					@apply relative
+					&:hover
+						&>ul
+							@apply opacity-100 visible
+					&>ul
+						@apply absolute top-full left-0 rem:w-[367px] p-6 flex flex-col gap-y-4 bg-primary-1 rounded-bl-2 opacity-0 invisible transition-300
+						&>li
+							@apply text-white/50 body-2
+							&>a
+								@apply block transition-300
+								&:hover
+									@apply text-white
+
+					&>a
+						@apply relative pb-1
+						&:hover::after
+							@apply w-full opacity-100
+						&::after
+							content: ""
+							@apply absolute bottom-0 left-0 w-0 h-0.5 bg-white opacity-0 transition-300
+			.header-search
+				@apply border flex items-center gap-2 px-5 py-1 rounded-6 max-w-[249px]  -xl:max-w-full -xl:flex-1 cursor-text text-white mr-3 -xl:ml-3 -lg:hidden
+				&::before
+					content: "\f002"
+					@apply title-20 text-white font-awesome font-light
+				input
+					@apply bg-transparent focus:outline-none flex justify-center
+				input::placeholder
+					@apply text-white body-4
+			.hamburger-mobile
+				@apply -lg:mr-2 xl:hidden

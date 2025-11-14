@@ -1,7 +1,72 @@
 header 
-	.bg-header
-		.bg-header-l
-			.logo
-				.img-ratio(class="ratio:pt-[78_267]")
+	.absolute(class="top-0 right-0 w-full h-full")
+		.bg-header
+			.bg-header-l
+			.bg-header-r 
+	.container.relative.px-0
+		.header-main
+			.logo-header 
+				.img-ratio(class="ratio:pt-[78_267] -lg:hidden")
 					+PugImg("./img/logo.svg")
-		.bg-header-r
+				.img-ratio(class="ratio:pt-[680_678] hidden -lg:block")
+					+PugImg("./img/logo-mobile.svg")
+			.menu-header
+				.menu-top 
+					ul
+						li
+							a(href="") Ophthalmology Center
+						li
+							a(href="") Plastic Surgery Hospital
+						li
+							a(href="" class="flex justify-center items-center -xl:gap-1")
+								.flex(class="border w-11 h-11 justify-center items-center rounded-full ")
+									<i class="fa-light fa-phone-plus"></i>
+								span HOTLINE:
+								| 82-51-463-3868
+						li.language-dropdown
+							.icon-en(class="w-4 " )
+								.img-ratio(class="ratio:pt[1_1] ")
+									+PugImg("./img/en.svg")
+							a(href="") English
+							ul.language-menu
+								li
+									a(href="#") 한국어
+								li
+									a(href="#") English
+								li
+									a(href="#") 中文
+				.menu-bottom
+					ul
+						li
+							a(href="") <i class="fa-solid fa-house"></i>
+						li
+							a(href="") About Us
+						li
+							a(href="") Services
+							ul
+								li
+									a(href="") a
+								li
+									a(href="") b
+								li
+									a(href="") b
+								li
+									a(href="") c
+								li
+									a(href="") d
+								li
+									a(href="") d
+								li
+									a(href="") f
+						li
+							a(href="") Hosoital
+						li
+							a(href="") Doctors
+						li
+							a(href="") News
+						li
+							a(href="") Contact
+					.header-search
+						input(type="text" placeholder="Search..." )
+					.hamburger-mobile
+						include ./HeaderHambuger.pug

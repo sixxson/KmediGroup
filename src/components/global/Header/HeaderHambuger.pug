@@ -1,72 +1,34 @@
-
-
-
 .header-hamburger
-
 	.wrap
-
 		span
-
 		span
-
 		span
-
 	#pulseMe
-
 		.bar.left
-
 		.bar.top
-
 		.bar.right
-
 		.bar.bottom
-
-
-
-.navbar-mobile(class="lg:hidden")
-
+.navbar-mobile(class="xl:hidden")
 	.header-search-form-mobile
-
 		input(type="text" placeholder="Search" class="focus:outline-primary-1/20")
-
 		button
-
 	.header-user-mobile 
-
 		ul
-
 			li.regster
-
 				a(href="") Đăng ký
-
 			li
-
 				a(href="") Đăng nhập
-
 	.menu-list
-
 		ul
-
 			li.has-children
-
-				+dropdownContent("Danh mục 1")
-
+				+dropdownContent("Kỹ thuật - Công Nghệ")
 			li.has-children
-
-				+dropdownContent("Danh mục 2")
-
+				+dropdownContent("Công nghệ -  Máy tính")
 			li.has-children
-
-				+dropdownContent("Danh mục 3")
-
+				+dropdownContent("Khoa học - Ô tô")
 			li.has-children
-
-				+dropdownContent("Danh mục 4")
-
+				+dropdownContent("Kỹ thuật - Mỹ Thuật")
 			li
-
-				a(href="#") Nạp tiền
-
+				a(href="#" class="deposit-button") Nạp tiền
 			li
-
 				a(href="#") Tải lên
