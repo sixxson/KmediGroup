@@ -598,6 +598,56 @@ module.exports = {
 						fontSize: 'calc(20/1920*100rem)', // xl
 					},
 				},
+					'.heading-h1':{
+					fontSize:	'calc(48/1920*100rem)',
+					fontWeight:	'700',
+					lineHeight:	'1.25',
+				},
+				'.heading-h2':{
+					fontSize:'calc(24/1920*100rem)',
+					fontWeight:	'700',
+					lineHeight:	'1.35',
+				},
+				'.heading-h3':{
+					fontSize:'calc(36/1920*100rem)',
+					fontWeight:	'700',
+					lineHeight:	'1.3',
+				},
+				'.heading-h4':{
+					fontSize:'calc(18/1920*100rem)',
+					fontWeight:	'700',
+					lineHeight:	'1.4',
+				},
+				'.heading-h5':{
+					fontSize:'calc(20/1920*100rem)',
+					fontWeight:	'700',
+					lineHeight:	'1.4',
+				},
+				'.body-1':{
+					fontSize:'calc(20/1920*100rem)',
+					fontWeight:	'400',
+					lineHeight:	'1.4',
+				},
+				'.body-2':{
+					fontSize:'calc(18/1920*100rem)',
+					fontWeight:	'400',
+					lineHeight:	'1.4',
+				},
+				'.body-3':{
+					fontSize:'calc(16/1920*100rem)',
+					fontWeight:	'400',
+					lineHeight:	'1.4',
+				},
+				'.body-4':{
+					fontSize:'calc(14/1920*100rem)',
+					fontWeight:	'400',
+					lineHeight:	'1.4',
+				},
+				'.body-5':{
+					fontSize:'calc(12/1920*100rem)',
+					fontWeight:	'400',
+					lineHeight:	'1.4',
+				},
 				'.body-14': {
 					'font-size': 'calc(14/1920*100rem)',
 				},
