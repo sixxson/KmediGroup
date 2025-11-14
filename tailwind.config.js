@@ -261,6 +261,20 @@ module.exports = {
 					"White": "#ffffff",
 					"Black": "#242021",
 					"000000": "#000000"
+
+				},
+				"gray": {
+					"gray-50": "#f6f6f6",
+					"gray-100": "#efefef",
+					"gray-200": "#dcdcdc",
+					"gray-300": "#bdbdbd",
+					"gray-400": "#989898",
+					"gray-500": "#818181",
+					"gray-600": "#656565",
+					"gray-700": "#525252",
+					"gray-800": "#464646",
+					"gray-900": "#3d3d3d",
+					"gray-950": "#292929",
 				},
 				optional: {
 					1: "#150f96",
@@ -865,6 +879,24 @@ module.exports = {
 								const percentage = `${(num1 / num2) * 100}%`;
 								decl.value = `${percentage}`;
 							}
+						}
+					});
+				});
+			});
+		}),
+		plugin(({ addVariant, e }) => {
+			addVariant("em", ({ container, separator }) => {
+				const rootFontSize = 19.2; // This is your HTML root font-size
+				container.walkRules((rule) => {
+					rule.selector = `.${e(`em${separator}`)}${rule.selector.slice(1)}`;
+					rule.walkDecls((decl) => {
+						if (decl.value.includes("px")) {
+							// Convert the pixel number to rem
+							const value = decl.value.replace(
+								/(\d+)px/g,
+								(match, p1) => `${p1 / rootFontSize}em`
+							);
+							decl.value = value;
 						}
 					});
 				});

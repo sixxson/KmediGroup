@@ -1,18 +1,20 @@
 .global-breadcrumb
 	@apply bg-[#f1f1f1] border-b border-white
 	p
-		@apply h-[calc(48/1920*100rem)] flex items-center overflow-auto
-		a
-			&:first-child
-				@apply text-0
-				&::before
-					content: '\f015'
-					@apply font-awesome text-sm
-		a,span
-			@apply text-sm text-[#333333] whitespace-nowrap
-		span.separator
-			@apply text-0 inline-flex
+		@apply flex items-center h-[calc(48/1920*100rem)] overflow-auto
+	a,
+	span
+		@apply text-sm text-gray-700 whitespace-nowrap
+	a
+		@apply px-2 py-0 font-normal transition-colors duration-200
+		&:hover
+			@apply text-primary-1
+		&:first-child
+			@apply pl-0 relative
 			&::before
-				content: "\f054"
-				@apply font-awesome font-normal text-sm mx-2
-
+				content: '\f015'
+				@apply font-awesome text-sm mr-2
+	span.separator
+		@apply inline-block w-[1px] h-[18px] bg-gray-700 mx-2
+	span.last
+		@apply font-bold text-primary-1

@@ -1,4 +1,3 @@
-
 .header-hamburger
 	.wrap
 		span
@@ -9,3 +8,27 @@
 		.bar.top
 		.bar.right
 		.bar.bottom
+.navbar-mobile(class="xl:hidden")
+	.header-search-form-mobile
+		input(type="text" placeholder="Search" class="focus:outline-primary-1/20")
+		button
+	.header-user-mobile 
+		ul
+			li.regster
+				a(href="") Đăng ký
+			li
+				a(href="") Đăng nhập
+	.menu-list
+		ul
+			li.has-children
+				+dropdownContent("Kỹ thuật - Công Nghệ")
+			li.has-children
+				+dropdownContent("Công nghệ -  Máy tính")
+			li.has-children
+				+dropdownContent("Khoa học - Ô tô")
+			li.has-children
+				+dropdownContent("Kỹ thuật - Mỹ Thuật")
+			li
+				a(href="#" class="deposit-button") Nạp tiền
+			li
+				a(href="#") Tải lên

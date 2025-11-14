@@ -20,6 +20,7 @@ export const header = {
 			$("body").toggleClass("isOpenMenu");
 		});
 	},
+
 	accordionMenu: function () {
 		$('.navbar-mobile .menu-list .has-children > a').on('click', function (e) {
 			e.preventDefault();
@@ -59,6 +60,7 @@ export const header = {
 		header.scrollUp();
 	},
 };
+
 document.addEventListener(
 	"scroll",
 	function (e) {
