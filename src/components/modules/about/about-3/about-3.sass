@@ -1,2 +1,33 @@
 .section-about-3
-  @apply bg-[url('/img/bg-section-about-3.png')]
+  @apply bg-[url('/img/bg-section-about-3.png')] bg-no-repeat bg-cover lg:pt-10 pt-0
+  .title-bg
+    -webkit-background-clip: text
+    -webkit-text-fill-color: white
+    -webkit-text-stroke: 2px rgba(16, 72, 145, 0.15)
+    -webkit-mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 30%,rgba(0,0,0,0) 100%)
+    mask-image: linear-gradient(to bottom,rgba(0,0,0,1) 30%,rgba(0,0,0,0) 100%)
+    @apply xl:text-9xl lg:text-8xl md:text-7xl sm:text-6xl text-5xl
+    @apply font-extrabold absolute -left-[2%] top-1/2 -xl:hidden
+    @apply -translate-x-1/2 -translate-y-1/2 -rotate-90 
+  .img-human
+    @apply -xl:hidden
+  .content-about-3
+    @apply w-[calc(800/1400*100%)] -xl:w-full space-y-10 py-13
+    .title-heading
+      @apply heading-h1 text-primary-1
+    .desc-content-about-3
+      @apply relative bg-white/80 lg:p-10 p-5 rounded-7 space-y-4 
+      span
+          @apply body-1 font-semibold 
+      .format-content
+        @apply space-y-2 xl:space-y-4
+        p
+          @apply mb-3
+        ul
+          @apply list-disc pl-5 flex flex-col gap-3 mb-3
+    .signature-content-about-3
+      @apply flex flex-col items-end text-primary-1
+      &>span:nth-child(1)
+        @apply heading-h1 font-secondary font-normal
+      &>span:nth-child(2)
+        @apply body-1 font-bold

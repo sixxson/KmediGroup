@@ -1,0 +1,12 @@
+section.section-about-4
+  .container.content-about-4
+    .heading-title-about-4
+      h2 Partner 
+      p Working Hand in Hand with Government and Global Partners
+    .swiper.logo-about-4.container
+      .swiper-wrapper
+        - for (let i = 0; i < 8; i++)
+          .swiper-slide
+            div(class='rem:w-[305px]')
+              div(class='img-ratio ratio:pt-[150_305]')
+                +PugImg('./img/logo-about-4.png')(class='object-cover')

@@ -10,12 +10,14 @@ import {
   stickElementToEdge,
 } from "./helper";
 import { header } from "./header";
+import { swiperInit } from "./swiper";
 $(document).ready(function () {
   setBackgroundElement();
   stickElementToEdge();
   clickScrollToDiv();
   menuSpy();
   header.init();
+  swiperInit();
 });
 
 /*==================== Aos Init ====================*/

@@ -87,6 +87,7 @@ module.exports = {
 		},
 		fontFamily: {
 			primary: ["Source Sans Pro", "sans-serif"],
+			secondary:['SVN-Ameyallinda Signature'],
 			goldman: ["Goldman", "sans-serif"],
 			awesome: ['"Font Awesome 6 Pro"'],
 			awesomeSharp: ['"Font Awesome 6 Sharp"'],
@@ -691,6 +692,12 @@ module.exports = {
 					gap: "calc(15/1920*100rem)",
 					[`@media (min-width: ${theme('screens.lg')})`]: {
 						gap: "calc(40/1920*100rem)",
+					},
+				},
+				".p-base":{
+					padding: "calc(15/1920*100rem)",
+					[`@media (min-width: ${theme('screens.lg')})`]: {
+						padding: "calc(40/1920*100rem)",
 					},
 				},
 				".mb-base": {
